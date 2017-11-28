@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. -->
+  <!-- 给出了两个非空链表，表示两个非负整数。数字以倒序存储，每个节点都包含一个数字。添加两个数字并将其作为一个链表返回。 -->
+
+  <!-- 1. l1 l2 长度可能不同 -->
+  <!-- 2. 数字以倒序存储 -->
+  <script type="text/javascript">
+  /**
+   * Definition for singly-linked list.
+   * function ListNode(val) {
+   *     this.val = val;
+   *     this.next = null;
+   * }
+   */
+  /**
+   * @param {ListNode} l1
+   * @param {ListNode} l2
+   * @return {ListNode}
+   */
+  var addTwoNumbers = function(l1, l2) {
+    var carry = 0 //进位符
+    var list = 0
+    var data = new ListNode(0)
+    var point = data
+    while(l1 || l2 || carry) {
+      list ++
+      var val1 = l1 ? (l1.val !== null ? l1.val : 0) : 0
+      var val2 = l2 ? (l2.val !== null ? l2.val : 0) : 0
+      var sum = val1 + val2 + carry
+      carry = sum >= 10 ? 1 : 0
+
+      var info = new ListNode(sum%10)
+      point.next = info
+      point = point.next
+
+      l1 = l1 ? (l1.next !== null ? l1.next : null) : null
+      l2 = l2 ? (l2.next !== null ? l2.next : null) : null
+    }
+    console.log(data.next);
+    return data.next
+  };
+
+  addTwoNumbers([1,2,3])
+
+  </script>
+</body>
+</html>
