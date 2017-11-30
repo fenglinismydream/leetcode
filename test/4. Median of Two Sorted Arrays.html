@@ -13,20 +13,21 @@
   <script type="text/javascript">
     var findMedianSortedArrays = function (nums1, nums2) {
       var nums = nums1.concat(nums2).sort(sortNumber)
+      var Length = nums.length
       if (nums1.length === 0) {
         nums = nums2
       }
       if (nums2.length === 0) {
         nums = nums1
       }
-      if ((nums.length / 2)%1 !== 0) {
-        if (nums.length === 1) {
-          return (nums[Math.floor(nums.length / 2)])
+      if ((Length / 2)%1 !== 0) {
+        if (Length === 1) {
+          return (nums[Math.floor(Length / 2)])
         } else {
-          return (nums[Math.ceil(nums.length / 2)])
+          return (nums[Math.ceil(Length / 2)])
         }
       } else {
-        return ((nums[(nums.length / 2) - 1] + nums[nums.length / 2]) / 2)
+        return ((nums[(Length / 2) - 1] + nums[Length / 2]) / 2)
       }
     }
 
