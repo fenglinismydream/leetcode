@@ -30,7 +30,7 @@
 题目：给定一个字符串s，在s中找到最长的回文子串，你可以假设s的最大长度是1000。
 -----
 思路：假设字符串为'dbaaab'，
-1、从i=0开始，prev记录字符串开始下标，next记录字符串结束下标，（next、prev分别等于i值）。maxLen记录回文字符串长度，先判断相邻字段是否相同，如（d和b）
-2、不相同则判断db向两边扩散，next++,prev--，此时prev= -1 所以i=0判断结束,i++
-3、当i=2,下标为next和next+1的相同时，++next，直至next!==next+1，此时prev =2,next=4, 进入2步骤
-4、记录prev,maxLen，输出s.substr(prev,manLen)
+1、从i=0开始，prev记录字符串开始下标，next记录字符串结束下标，（next、prev分别等于i值）。maxLen记录回文字符串长度，先判断相邻字段是否相同，如（d和b）<br>
+2、不相同则判断db向两边扩散，next++,prev--，此时prev= -1 所以i=0判断结束,i++<br>
+3、当i=2,下标为next和next+1的相同时，++next，直至next!==next+1，此时prev =2,next=4, 进入2步骤<br>
+4、记录prev,maxLen，输出s.substr(prev,manLen)<br>
