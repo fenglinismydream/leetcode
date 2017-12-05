@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  var longestPalindrome = function(s) {
+      var len = s.length
+      if (len < 2) {
+        return s
+      }
+      var minStart = 0
+      var maxLen = 1
+      for(var i = 0; i < len - 1;) {
+          var prev = i
+          var next = i
+          // 判断相邻的是否字符是否相同 若相同 next++ 继续判断接下来的相邻字符是否相同
+          while(next < len - 1 && s[next + 1] === s[next])
+          {
+            ++next
+          }
+          i = next + 1
+          // 之前相邻相同的字符判断完 记录下prev next 的值 接着判断这段连续相同的字符两边是否相同
+          while(next < len - 1 && prev > 0 && s[prev-1] === s[next+1]) {
+              next++
+              prev--
+          }
+          var curLen = next - prev + 1
+          // 记录最长的回文字段
+          if(curLen > maxLen) {
+              minStart = prev
+              maxLen = curLen
+          }
+      }
+      return s.substr(minStart, maxLen)
+      // 结果为： baaab
+  };
+
+    longestPalindrome('dbaaab')
+  </script>
+</body>
+</html>
