@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Given a 32-bit signed integer, reverse digits of an integer. -->
+  <!-- 给定一个32位带符号整数，一个整数的反向数字。 -->
+  <script type="text/javascript">
+    var reverse = function (x) {
+      var res = 0;
+      while(x){
+        //每一次取最后一位数
+        var endNum = x % 10
+        var firstNum = res * 10
+        //把最后一位放到第一位
+        res = firstNum + endNum;
+        //x为去掉最后一个数字 剩余的数
+        x = parseInt(x/10);  //（由于js是弱类型语言， 要将x转换为整型）
+      }
+      if(res > Math.pow(2, 31) || -res < Math.pow(2, 31)){
+        res = 0
+      }
+      return res
+    }
+    reverse('1534236469')
+  </script>
+</body>
+</html>
