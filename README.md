@@ -13,11 +13,10 @@
 -----
 思路：当时第一次看到题目的时候，没有看懂题意，对链表的知识掌握不多，忘记了链表的定义和一些基本的操作。题目中括号里是之后自己对题目的理解。题目中并没有规定两个链表的长度是否相同，就要考虑长度不同的情况。至于倒序存储还没有明白（如果接下来搞明白，会来记录一下）
 
-3、Longest Substring Without Repeating Characters  ---medium
+3、[Longest Substring Without Repeating Characters](https://github.com/fenglinismydream/leetcode/blob/master/test/3.%20Longest%20Substring%20Without%20Repeating%20Characters.html)  ---medium
 =====
 题目：给定一个字符串，查找没有重复字符的最长子字符串的长度。
 -----
-思路：双指针，一个标记头指针的位置，一个标记尾指针的位置，没有找到指定字符尾指针移动，否则头指针移动，另一个值记录最大maxlength。
 
 4、Median of Two Sorted Arrays  ---hard
 =====
