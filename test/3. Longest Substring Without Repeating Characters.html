@@ -11,24 +11,30 @@
   <!-- 给定一个字符串，查找没有重复字符的最长子字符串的长度。 -->
   <script type="text/javascript">
     var lengthOfLongestSubstring = function(s) {
-      var Length = 1
-      var MaxLength = 1
-      if (s.length === 0) {
-        return 0
-      }
-      for (var i = 1; i < s.length; i++) {
-        var index = s.substr(i - Length, Length).indexOf(s.substr(i, 1))
-        if (index === -1) {
-          Length++
-        } else {
-          Length = Length - index
-        }
-        if (MaxLength < Length) {
-          MaxLength = Length
+      if (!s || s.length < 1) { return '' }
+      let maxLength = 0
+      let start = 0
+      let end = 0
+
+      for (let i = 0; i < s.length; i++) {
+        let length1 = getCurrentCharPaLength(s, i, i)
+        let length2 = getCurrentCharPaLength(s, i, i + 1)
+        let length = Math.max(length1, length2)
+        if (length > (end - start)) {
+          start = i - Math.floor((length - 1) / 2)
+          end = i + Math.floor(length / 2)
         }
       }
-      // s = 'abcabcbb'
-      // MaxLength === 3
+      return s.substring(start, end + 1)
+    }
+    function getCurrentCharPaLength(s, left, right) {
+      let first = left
+      let end = right
+      while (first >= 0 && end < s.length && s.charAt(first) === s.charAt(end)) {
+        first--
+        end++
+      }
+      return end - first - 1
     }
   </script>
 </body>
