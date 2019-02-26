@@ -1,6 +1,6 @@
 # leetcode
 
-1、Two Sum   ---easy
+1、[Two Sum   ---easy](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
 =====
 题目：给定一个整数数组，两个数字的返回索引，它们加到一个特定的目标。
 -----
