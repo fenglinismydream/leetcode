@@ -35,7 +35,7 @@
 3、当i=2,下标为next和next+1的相同时，++next，直至next!==next+1，此时prev =2,next=4, 进入2步骤<br>
 4、记录prev,maxLen，输出s.substr(prev,manLen)
 
-6、Reverse Integer  ---easy
+6、[Reverse Integer  ---easy](https://github.com/fenglinismydream/leetcode/blob/master/test/6.%20Reverse%20Integer)
 =====
 题目:给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
 -----
