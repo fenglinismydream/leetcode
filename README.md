@@ -43,3 +43,12 @@
 思路:
 - 数字转为字符串操作
 - 取余反转
+
+7、 [String to Integer (atoi)](https://github.com/fenglinismydream/leetcode/blob/master/test/7.%20String%20to%20Integer%20(atoi))
+=====
+题目: 使其能将字符串转换成整数.
+-----
+思路:
+- 字符串操作
+- 正则匹配
+
