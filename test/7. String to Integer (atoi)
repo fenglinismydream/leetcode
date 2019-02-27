@@ -1,0 +1,57 @@
+ * @param {string} str
+ * @return {number}
+ */
+var myAtoi = function(str) {
+      let result = []
+      for(let i = 0; i < str.length; i++) {
+          if (str[i] === ' ') {
+              if (result.length) {
+                  break
+              }
+          } else if (!isNaN(str[i]) || str[i] === '-' || str[i] === '+') {
+              if (str[i] === '-' || str[i] === '+') {
+                if (!result.length) {
+                  result.push(str[i])
+                } else {
+                  break
+                }
+              } else {
+                  result.push(str[i])
+              }
+          } else {
+              break
+          }
+      }
+      console.log(result)
+      return isNaN(result.join('')) ? 0 : Math.max(Math.min(result.join(''), Math.pow(2, 31) -1), Math.pow(-2, 31))
+  };
+  
+  var myAtoi2 = function(str) {
+    str = str.trim()
+    if (!str) {
+      return 0
+    }
+    
+    if (str.length === 1) {
+      return isNaN(+str) ? 0 : str
+    }
+    
+    let extractReg = /^([+|-]?)(\d+)/
+    
+    let signal = ''
+    let num = 0
+    let newStr = str.replace(extractReg, (match, $signal, $num) => { //$signal值为正则第一个括号匹配到的值 $num为第二个
+      signal = $signal
+      num = $num
+    })
+    
+    if (!num) {
+      return 0
+    }
+    
+    if (num >= Math.pow(2, 31)) {
+      num = signal === '-' ? Math.pow(2, 31) : Math.pow(2, 31) - 1
+    }
+    
+    return signal === '-' ? +('-' + num) : num
+  }
