@@ -52,7 +52,7 @@
 - 字符串操作
 - 正则匹配
 
-8、 [Palindrome Number]()
+8、 [Palindrome Number](https://github.com/fenglinismydream/leetcode/blob/master/test/8.%20Palindrome%20Number)
 =====
 题目: 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
 -----
