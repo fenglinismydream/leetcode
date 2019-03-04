@@ -53,7 +53,7 @@
 - 暴力法: 双循环
 - 双指针法: 两线段之间形成的区域总是会受到其中较短那条长度的限制。此外，两线段距离越远，得到的面积就越大。
 
-10、[Longest Common Prefix]()
+10、[Longest Common Prefix](https://github.com/fenglinismydream/leetcode/blob/master/test/10.%20Longest%20Common%20Prefix)
 > 题目: 编写一个函数来查找字符串数组中的最长公共前缀。如果不存在公共前缀，返回空字符串 ""。<br>
 > 思路:
 - 取出数组中最短字符串那一个,因为只要符合公共最长前缀,一定包含最短字符串,有可能是最短字符串本身.
