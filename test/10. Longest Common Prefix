@@ -1,0 +1,23 @@
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefix = function(strs) {
+    if (!strs.length > 0) return ''
+    let str = strs.reduce((a, c) => {return a.length < c.length ? a : c}) // 取数组中 字符串长度最短的那一个
+    let result = ''
+    let right = 1
+    let i = 0
+    let newStr = str.substring(0, right)
+    while (i <= str.length) {
+      let a = strs.every((item, index) => {
+        return item.substring(0, right) === newStr
+      })
+      if (a) {
+        result = result.length < newStr.length ? newStr : result
+        right++
+      }
+      i++
+    }
+    return result
+};
