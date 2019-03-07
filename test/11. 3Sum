@@ -1,0 +1,61 @@
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+ // 第一种方法
+var threeSum = function(nums) {
+    let arr = getArr(nums)
+    let arr2 = []
+    arr.forEach((item) => {
+      let result = item.map(i => nums[i]).reduce((d,c) => d + c)
+      let resultArr = item.map(i => nums[i]).sort((a,b) => {return a - b})
+      if (result === 0) {
+        if (!arr2.some(item2 => {return item2.toString() === resultArr.toString()})) {
+          arr2.push(resultArr)
+        }
+      }
+    })
+    return arr2
+};
+
+const getArr = function (nums) {
+  let arr = []
+  for(let i = 0; i < nums.length; i++) {
+    for(let j = i + 1 ; j < nums.length; j++) {
+      for(let k = j + 1 ; k < nums.length; k++) {
+        arr.push([i,j,k])
+      }
+    }
+  }
+  return arr
+}
+
+//第二种方法
+var threeSum = function (nums) {
+  let sum, left, right
+  const result = []
+  nums.sort((a, b) => a - b).forEach((n, i) => {
+    [left, right] = [i+1, nums.length - 1]
+    if (n !== nums[i-1]) {
+      while (left < right) {
+        sum = n + nums[left] + nums[right]
+        if (sum === 0) {
+          result.push([n, nums[left], nums[right]])
+          while(left < right && nums[left] === nums[left + 1]) {
+            left++
+          }
+          while(left < right && nums[right] === nums[right - 1]) {
+            right--
+          }
+          right--
+          left++
+        } else if (sum > 0) {
+          right--
+        } else {
+          left++
+        }
+      }
+    }
+  })
+  return result
+}
