@@ -41,7 +41,7 @@ var threeSum = function (nums) {
         sum = n + nums[left] + nums[right]
         if (sum === 0) {
           result.push([n, nums[left], nums[right]])
-          while(left < right && nums[left] === nums[left + 1]) {
+          while(left < right && nums[left] === nums[left + 1]) { // 若相等 跳过
             left++
           }
           while(left < right && nums[right] === nums[right - 1]) {
