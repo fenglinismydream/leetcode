@@ -70,7 +70,7 @@
 > 题目:给定一个包括 n 个整数的数组 nums 和 一个目标值 target。找出 nums 中的三个整数，使得它们的和与 target 最接近。返回这三个数的和。假定每组输入只存在唯一答案。<br>
 > 思路: 与11题思路相似,只是把11题中的0改为target即可.
 
-13、[Valid Parentheses]()
+13、[Valid Parentheses](https://github.com/fenglinismydream/leetcode/blob/master/test/13.%20Valid%20Parentheses)
 > 题目:给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
 > 有效字符串需满足：
 1. 左括号必须用相同类型的右括号闭合。
