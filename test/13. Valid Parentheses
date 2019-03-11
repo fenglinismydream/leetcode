@@ -1,0 +1,35 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+    let newMap = new Map()
+    let _index = true
+    newMap.set(')', '(')
+    newMap.set(']', '[')
+    newMap.set('}', '{')
+    let arr = []
+    for(let i = 0; i < s.length; i++) {
+      if (s[i] === ' ') {
+        continue
+      }
+      if (s[i] === '(' || s[i] === '[' || s[i] === '{') {
+        arr.push(s[i])
+        continue
+      }
+      if (newMap.get(s[i]) === arr[arr.length - 1]) {
+        arr.pop()
+        continue
+      } else {
+        _index = false
+      }
+    }
+    if (arr.length > 0) {
+      _index = false
+    }
+    return _index
+};
+
+isValid('(]') // false
+isValid('()[]{}') //true
+isValid('([)]') //false
