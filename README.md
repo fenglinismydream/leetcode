@@ -77,7 +77,7 @@
 2. 左括号必须以正确的顺序闭合。
 > 思路: 正确的括号闭合 - 在右括号之前一定有相对应的左括号,这样就可以对字符串循环,左括号放入类似于栈的思想(找到左括号放入栈中,之后若右括号再栈顶找到对应的就将其从栈中拿出,若没找到,则括号不对应,字符串无效.),这里是用一个数组模拟一个栈.
 
-14、[Merge Two Sorted Lists]()
+14、[Merge Two Sorted Lists](https://github.com/fenglinismydream/leetcode/blob/master/test/14.%20Merge%20Two%20Sorted%20Lists)
 > 题目: 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
 
 
