@@ -1,42 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <!-- There are two sorted arrays nums1 and nums2 of size m and n respectively.
-  Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). -->
-  <!-- 在两个有序数组中寻找中位数  时间复杂度应该为O(log(m+n)) -->
-  <script type="text/javascript">
-    var findMedianSortedArrays = function (nums1, nums2) {
-      var nums = nums1.concat(nums2).sort(sortNumber)
-      var Length = nums.length
-      if (nums1.length === 0) {
-        nums = nums2
-      }
-      if (nums2.length === 0) {
-        nums = nums1
-      }
-      if ((Length / 2)%1 !== 0) {
-        if (Length === 1) {
-          return (nums[Math.floor(Length / 2)])
-        } else {
-          return (nums[Math.ceil(Length / 2)])
-        }
+<!-- There are two sorted arrays nums1 and nums2 of size m and n respectively.
+Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). -->
+<!-- 在两个有序数组中寻找中位数  时间复杂度应该为O(log(m+n)) -->
+  var findMedianSortedArrays = function (nums1, nums2) {
+    var nums = nums1.concat(nums2).sort(sortNumber)
+    var Length = nums.length
+    if (nums1.length === 0) {
+      nums = nums2
+    }
+    if (nums2.length === 0) {
+      nums = nums1
+    }
+    if ((Length / 2)%1 !== 0) {
+      if (Length === 1) {
+        return (nums[Math.floor(Length / 2)])
       } else {
-        return ((nums[(Length / 2) - 1] + nums[Length / 2]) / 2)
+        return (nums[Math.ceil(Length / 2)])
       }
+    } else {
+      return ((nums[(Length / 2) - 1] + nums[Length / 2]) / 2)
     }
+  }
 
-    var sortNumber = function (a, b) {
-      return a - b
-    }
-    findMedianSortedArrays([1], [2, 3, 4, 5, 6, 7, 8, 9, 10])
-
-  </script>
-
-</body>
-</html>
+  var sortNumber = function (a, b) {
+    return a - b
+  }
+  findMedianSortedArrays([1], [2, 3, 4, 5, 6, 7, 8, 9, 10])
