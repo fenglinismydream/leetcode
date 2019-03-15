@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <!-- Given a string, find the length of the longest substring without repeating characters. -->
-  <!-- 给定一个字符串，查找没有重复字符的最长子字符串的长度。 -->
-  <script type="text/javascript">
-    var lengthOfLongestSubstring = function(s) {
-      if (!s || s.length < 1) { return '' }
-      let maxLength = 0
-      let start = 0
-      let end = 0
+<!-- Given a string, find the length of the longest substring without repeating characters. -->
+<!-- 给定一个字符串，查找没有重复字符的最长子字符串的长度。 -->
+<!--
+  思路: 中心扩展,在回文中心的两侧互为镜像.因此可以从它的中心展开,并且只有2n-1个这样的中心(字母数为偶数的回文的中心可以处于两字母之间)
+-->
+  var lengthOfLongestSubstring = function(s) {
+    if (!s || s.length < 1) { return '' }
+    let maxLength = 0
+    let start = 0
+    let end = 0
 
-      for (let i = 0; i < s.length; i++) {
-        let length1 = getCurrentCharPaLength(s, i, i)
-        let length2 = getCurrentCharPaLength(s, i, i + 1)
-        let length = Math.max(length1, length2)
-        if (length > (end - start)) {
-          start = i - Math.floor((length - 1) / 2)
-          end = i + Math.floor(length / 2)
-        }
+    for (let i = 0; i < s.length; i++) {
+      let length1 = getCurrentCharPaLength(s, i, i)
+      let length2 = getCurrentCharPaLength(s, i, i + 1)
+      let length = Math.max(length1, length2)
+      if (length > (end - start)) {
+        start = i - Math.floor((length - 1) / 2)
+        end = i + Math.floor(length / 2)
       }
-      return s.substring(start, end + 1)
     }
-    function getCurrentCharPaLength(s, left, right) {
-      let first = left
-      let end = right
-      while (first >= 0 && end < s.length && s.charAt(first) === s.charAt(end)) {
-        first--
-        end++
-      }
-      return end - first - 1
+    return s.substring(start, end + 1)
+  }
+  function getCurrentCharPaLength(s, left, right) {
+    let first = left
+    let end = right
+    while (first >= 0 && end < s.length && s.charAt(first) === s.charAt(end)) {
+      first--
+      end++
     }
-  </script>
-</body>
-</html>
+    return end - first - 1
+  }
