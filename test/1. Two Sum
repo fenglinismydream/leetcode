@@ -3,6 +3,12 @@
 You may assume that each input would have exactly one solution, and you may not use the same element twice. -->
 
 <!-- 给定一个整数数组，两个数字的返回索引，它们加到一个特定的目标。 -->
+
+<!--
+  思路: 
+  1、一个双循环，第二个循环从第一个循环下标的下一个作为起点。(暴力解法，此解法算是刚拿到题目首先想到的解法。)
+  2、另一种解法：提高降低时间复杂度，增加空间复杂度。
+-->
   var twoSum = function(nums, target) {
     // for (var i = 0; i < nums.length; i++) {
     //   for (var j = i + 1; j < nums.length; j++) {
