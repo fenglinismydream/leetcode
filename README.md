@@ -5,7 +5,7 @@
 1 | Two Sum | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
 2 | Add Two Numbers | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
 3 | Longest Substring Without Repeating Characters | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/3.%20Longest%20Substring%20Without%20Repeating%20Characters.html)
-4 | Median of Two Sorted Arrays | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
+4 | Median of Two Sorted Arrays | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/4.%20Median%20of%20Two%20Sorted%20Arrays.html)
 5 | Longest Palindromic Substring | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
 6 | Reverse Integer | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/6.%20Reverse%20Integer)
 7 | String to Integer (atoi) | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/7.%20String%20to%20Integer%20(atoi))
