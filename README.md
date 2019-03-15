@@ -1,5 +1,24 @@
 # leetcode
 
+序号 | 题目 | 解法(附思路)
+---|---|---
+1 | Two Sum | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
+2 | Add Two Numbers | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
+3 | Longest Substring Without Repeating Characters | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/3.%20Longest%20Substring%20Without%20Repeating%20Characters.html)
+4 | Median of Two Sorted Arrays | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
+5 | Longest Palindromic Substring | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/2.%20Add%20Two%20Numbers)
+6 | Reverse Integer | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/6.%20Reverse%20Integer)
+7 | String to Integer (atoi) | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/7.%20String%20to%20Integer%20(atoi))
+8 | Palindrome Number | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/8.%20Palindrome%20Number)
+9 | Container With Most Water | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/9.%20Container%20With%20Most%20Water)
+10 | Longest Common Prefix | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/10.%20Longest%20Common%20Prefix)
+11 | 3Sum | [javascript](https://github.com/fenglinismydream/leetcode/edit/master/test/11.%203Sum)
+12 | 3Sum Closest | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/12.%203Sum%20Closest)
+13 | Valid Parentheses | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/13.%20Valid%20Parentheses)
+14 | Merge Two Sorted Lists | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/14.%20Merge%20Two%20Sorted%20Lists)
+15 | Merge k Sorted Lists | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/15.%20Merge%20k%20Sorted%20Lists)
+
+
 1、[Two Sum   ---easy](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
 > 题目：给定一个整数数组，两个数字的返回索引，它们加到一个特定的目标。<br>
 > 思路：
