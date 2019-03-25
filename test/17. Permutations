@@ -1,0 +1,37 @@
+<!--
+  题目: 给定一个没有重复数字的序列，返回其所有可能的全排列。
+-->
+
+<!--
+  思路: 先取出一个值,再创建一个两个值的全排列,将取出的值,放入全排列的每个数组的每一个位置生成新数组,不断取值插入.
+-->
+
+/**
+ * @param {number[]} nums
+ * @return {number[][]}
+ */
+var permute = function(nums) {
+    let len = nums.length
+    return per(len - 1)
+    
+    function per (i) {
+        if (i === 0) {
+            return [[nums[0]]]
+        } else if (i === 1) {
+            return [[nums[0], nums[1]], [nums[1], nums[0]]]
+        }
+        
+        
+        let arr = per(i - 1)
+        let result = []
+        let _index = nums[i]
+        for(let j = 0; j < arr.length; j++) {
+            for(let k = 0; k <= i; k++) {
+                let _arr = arr[j].slice()
+                _arr.splice(k, 0, _index)
+                result.push(_arr)
+            }
+        }
+        return result
+    }
+};
