@@ -1,0 +1,64 @@
+<!--
+  题目: 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+-->
+
+<!--
+  思路: 
+  1. 在指定数组中,分别取不同长度求和,找出最大值.O(n^2),指定数组大,运行超时.
+  2. 最优子结构性质: 如果问题的最优解所包含的子问题的解也是最优的.
+     取数组一个值为最大值和当前值,数组循环以第二个值开始,
+       若第i个值 > 当前值 + 第i个值,当前值 = 第i值
+       否则当前值 = 第i值 + 当前值
+        
+       若当前值大于最大值  赋值给最大值 
+      
+      (说白了,就是若第i值大于之前累加的值,就舍弃之前的值,第i值作为当前值)
+-->
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxSubArray = function(nums) { //暴力法
+    let index = 1
+    let result = nums.reduce((p, c) => p + c)
+    while (index < nums.length) {
+      for (let i = 0; i <= nums.length; i++) {
+        let arr = nums.slice(i, i+index)
+        if (nums.slice(i, i+index).length === index) {
+          let sum = arr ? arr.reduce((p, c) => p + c) : []
+          if (sum > result) {
+            result = sum
+          }
+        }
+      }
+      index++
+    }
+    return result
+};
+var maxSubArray = function(nums) { //es6
+  let max = nums[0]
+  nums.reduce((sum, num) => {
+    sum = Math.max(sum + num, num)
+    max = Math.max(max, sum)
+    return sum
+  })
+  return max
+}
+
+var maxSubArray = function(nums) { //es6
+  let cur = nums[0]
+  let max = nums[0]
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > cur + nums[i]) {
+      cur = nums[i]
+    } else {
+      cur = nums[i] + cur
+    }
+
+    if (cur > max) {
+      max = cur
+    }
+  }
+  return max
+}
