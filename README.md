@@ -19,6 +19,7 @@
 15 | Merge k Sorted Lists | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/15.%20Merge%20k%20Sorted%20Lists)
 16 | Search in Rotated Sorted Array | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/16.%20Search%20in%20Rotated%20Sorted%20Array)
 17 | permutations | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/17.%20Permutations)
+18 | Maximum Subarray | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/18.%20Maximum%20Subarray)
 
 
 1、[Two Sum   ---easy](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
