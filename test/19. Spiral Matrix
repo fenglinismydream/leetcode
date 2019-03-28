@@ -1,0 +1,61 @@
+<!--
+  题目: 给定一个包含 m x n 个元素的矩阵（m 行, n 列），请按照顺时针螺旋顺序，返回矩阵中的所有元素。
+-->
+
+<!--
+  思路: 螺旋矩阵顺时针,上->右->下->左.
+  
+  上: 取数组第一个对象并删除.
+  右: 取数组中每一个对象中的最后一个并删除.
+  下: 取数组最后一个对象倒序并删除.
+  左: 取数组中每一个对象中的第一个并删除.
+  
+  反复执行这个循环.直到数组为空.
+-->
+
+
+
+/**
+ * @param {number[][]} matrix
+ * @return {number[]}
+ */
+var spiralOrder = function(matrix) {
+    return handle(matrix, [])
+};
+function handle (arr, result) {
+    //去除空数组
+    arr = arr.filter(i => i.length !== 0)
+    //一行
+    if (arr.length === 1) {
+        result = result.concat(arr[0])
+        return result
+    }
+    //一列
+    if (arr.every(i => i.length === 1)) {
+        result = result.concat(arr.map(i => i[0]))
+        return result
+    }
+    if (arr.length === 0) {
+        return result;
+    }
+    // 上
+    result = result.concat(arr.shift())
+    // 右
+    arr.forEach((i) => {
+        result.push(i.pop())
+    })
+    //下
+    if (arr.length > 0) {
+      result = result.concat(arr.pop().reverse())
+    }
+
+    //左
+    let temp = []
+    arr.forEach((i) => {
+        temp.push(i.shift())
+    })
+    result = result.concat(temp.reverse())
+
+    return handle(arr, result)
+
+}
