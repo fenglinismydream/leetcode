@@ -21,6 +21,7 @@
 17 | permutations | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/17.%20Permutations)
 18 | Maximum Subarray | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/18.%20Maximum%20Subarray)
 19 | Spiral Matrix | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/19.%20Spiral%20Matrix)
+20 | Spiral Matrix II | [javascript](https://github.com/fenglinismydream/leetcode/blob/master/test/20.%20Spiral%20Matrix%20II)
 
 
 1、[Two Sum   ---easy](https://github.com/fenglinismydream/leetcode/blob/master/test/1.%20Two%20Sum)
